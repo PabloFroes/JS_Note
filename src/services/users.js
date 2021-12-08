@@ -10,7 +10,23 @@ const UsersServices= {
     logout:() =>{
         localStorage.removeItem('user')
         localStorage.removeItem('token')
+    },
+    update: async (params)  =>{
+        const response = await Api.put('/users/', params ,{
+        headers: {'x-access-token': localStorage.getItem('token')}})
+        localStorage.setItem('user', JSON.stringify(response.data))
+    },
+    updatePassword: async (params) => {
+        await Api.put('/users/password' ,params, {
+            headers: {'x-access-token': localStorage.getItem('token')}
+        })
+    },
+    delete: async () => {
+        await Api.delete('/users', {
+            headers: {'x-access-token': localStorage.getItem('token')}
+        })
+        localStorage.removeItem('user', null)
+        localStorage.removeItem('token', null)
     }
 }
-
 export default UsersServices

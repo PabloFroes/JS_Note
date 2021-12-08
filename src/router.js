@@ -10,7 +10,7 @@ import PrivateRouter from "./components/auth/private_router";
 const Router = () => (
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<HomeScreen/>}/>
+            <Route path="/" element={<PrivateRouter paramScreen={"/notes"} invalidScreen={<HomeScreen/>}/> }/>
             <Route path="/register" element={<RegisterScreen/>}/>
             <Route path="/login" element={<LoginScreen/>}/>
             <Route path="/users/edit" element={<UsersEditScreen/>}/>

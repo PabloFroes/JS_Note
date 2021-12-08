@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from "react";
-import { Button, Field, Control, Input, Column, Section, Help, Label } from "rbx";
+import { Button, Field, Control, Input, Column, Help, Label } from "rbx";
 import { Navigate } from 'react-router-dom'
 import UsersServices from "../../../services/users";
 
@@ -13,7 +13,7 @@ import UsersServices from "../../../services/users";
         const HandleSubmit = async (evt) => {
             evt.preventDefault()
             try {
-                const user = await UsersServices.login({email: email, password: password})
+                await UsersServices.login({email: email, password: password})
                 setRedirectToNotes(true)
             } catch (error) {
                 setError(true)

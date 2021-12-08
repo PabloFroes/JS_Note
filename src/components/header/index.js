@@ -3,10 +3,10 @@ import "../../styles/header.scss"
 import HeaderLogged from "./logged";
 import HeaderLogin from "./login";
 
-function Header(){
+function Header(props){
     if( localStorage.getItem('user')){
         return (
-            <HeaderLogged/>
+            <HeaderLogged menu={props}/>
         )
     } else return(
         <HeaderLogin/>
