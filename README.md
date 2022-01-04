@@ -13,3 +13,16 @@ Link to access: https://js-react-notes-client.herokuapp.com/
 <br/>
 <img src="https://i.ibb.co/vvwcqKj/js-note-home.jpg" alt="js-note-home" border="0" />
 <img src="https://i.ibb.co/jh90rTM/js-note-editor.jpg" alt="js-note-editor" border="0" />
+
+## To Run
+
+In the project directory, you can run:
+
+### `npm install`
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## You will need JS Note API running to use this app
+### [JS_NOTE_API](https://github.com/PabloFroes/JS_Note_API)
